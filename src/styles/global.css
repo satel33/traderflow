@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+@layer base {
+  @font-face {
+    font-family: "Open Sauce One";
+    font-style: normal;
+    font-weight: 500;
+    src: url(./fonts/OpenSauceOne-Medium.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Open Sauce One";
+    font-style: normal;
+    font-weight: 600;
+    src: url(./fonts/OpenSauceOne-SemiBold.ttf) format("truetype");
+  }
+
+  @font-face {
+    font-family: "Open Sauce One";
+    font-style: normal;
+    font-weight: 700;
+    src: url(./fonts/OpenSauceOne-Bold.ttf) format("truetype");
+  }
+}
+
+body {
+  overflow-x: hidden;
+  background: hsl(235, 86%, 5%);
+  font-family: "Inter";
+}
+
+@layer components {
+  .gold-linear {
+    background: linear-gradient(133.32deg, #f5c96d 0%, #f5b160 86.31%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .landing-back {
+    background-image: url(../images/home-back.png);
+    background-color: hsl(235, 86%, 5%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+  }
+  .community-back {
+    background-image: url(../images/community-back.png);
+    background-color: hsl(235, 86%, 5%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+  }
+  .text-box {
+    background-image: url(../images/text-box.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .text-box2 {
+    background-image: url(../images/text-box2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .text-box3 {
+    background-image: url(../images/text-box3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .text-box4 {
+    background-image: url(../images/text-box4.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .bg-radial {
+    background: radial-gradient(
+      96.37% 96.37% at 50% 50%,
+      rgba(17, 98, 253, 0.4) 0%,
+      rgba(17, 98, 253, 0) 72.85%
+    );
+  }
+
+  .spatial-hover {
+    filter: drop-shadow(0px 0px 20px rgba(17, 98, 253, 0.5));
+  }
+
+  .btn-cta {
+    @apply !py-5 !px-8 sm:!px-12 sm:!py-6;
+  }
+
+  @media (max-width: 1440px) {
+    .landing-back {
+      background-image: url(../images/home-back-laptop.png);
+    }
+  }
+  @media (max-width: 985px) {
+    .text-box2 {
+      background-image: none;
+    }
+  }
+  @media (max-width: 750px) {
+    .text-box4 {
+      background-image: url(../images/text-box4-mob.png);
+    }
+    .landing-back {
+      background-image: url(../images/home-back-mob.png);
+    }
+  }
+}
+
+/* Swiper Styles */
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 0 !important;
+  background: radial-gradient(
+    96.37% 96.37% at 50% 50%,
+    rgba(17, 98, 253, 0.4) 0%,
+    rgba(17, 98, 253, 0) 72.85%
+  ) !important;
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background: linear-gradient(133.32deg, #f5c96d 0%, #f5b160 86.31%) !important;
+}
