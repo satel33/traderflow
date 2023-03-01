@@ -15,6 +15,21 @@ module.exports = {
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-csp`,
+      options: {
+        mergeScriptHashes: true,
+        mergeStyleHashes: true,
+        mergeDefaultDirectives: true,
+        directives: {
+          "default-src": "'self' https:",
+          "script-src": "'self' 'unsafe-inline' https:",
+          "style-src": "'self' 'unsafe-inline' https: blob: ",
+          "img-src": "'self' data: https:",
+          "font-src": "'self' data: https:",
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -39,6 +54,6 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-postcss`
+    `gatsby-plugin-postcss`,
   ],
 }

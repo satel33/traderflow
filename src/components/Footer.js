@@ -30,7 +30,7 @@ const Footer = () => (
         </div>
       </div>
       <p className="pt-24 text-center text-base text-gray-light">
-        All rights reserved. © Traderflow {new Date().getFullYear()}
+        All rights reserved. © Traderflow 2023
       </p>
     </div>
   </footer>
