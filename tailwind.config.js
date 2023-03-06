@@ -10,32 +10,39 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: "12px",
-        sm: "1.5rem",
+        sm: "2rem",
       },
-    },
-    colors: {
-      black: "#02041A",
-      white: "#FEFEFE",
-      blue: {
-        bright: "#1162FD",
-        light: "#6FA9FF",
-        gray: "#5678B9",
-      },
-      gray: {
-        DEFAULT: "#B5BEE4",
-        light: "#B0B5C9",
-      },
-      gold: "#FFE9B0",
     },
     extend: {
+      colors: {
+        black: "#02041A",
+        white: "#FEFEFE",
+        blue: {
+          bright: "#1162FD",
+          light: "#6FA9FF",
+          gray: "#5678B9",
+        },
+        gray: {
+          DEFAULT: "#B5BEE4",
+          light: "#B0B5C9",
+        },
+        gold: "#FFE9B0",
+      },
       fontFamily: {
         heading: ['"Open Sauce One"'],
         body: ["Inter"],
       },
+      backgroundImage: {
+
+      },
       screens: {
-        sm: "750px",
-        md: "970px",
-        lg: "1025px",
+        'xxxs': '337px',
+        'xxs': '362px',
+        'xs': '426px',
+        'sm': "750px",
+        'md': "970px",
+        'lg': "1025px",
+        'xl': "1440px",
       },
       boxShadow: {
         button: "0px 0px 10px rgba(85, 143, 255, 0.5)",

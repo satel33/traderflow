@@ -52,7 +52,7 @@ export const spatials = [
 
 export const roadmaps = [
   {
-    height: "480px",
+    height: "1st",
     list: [
       { status: true, name: "Updating Traderscore NFTs" },
       { status: false, name: "MT4/MT5 On-Chain Trade Records" },
@@ -61,7 +61,7 @@ export const roadmaps = [
     quater: "2023 Q1",
   },
   {
-    height: "233px",
+    height: "2nd",
     list: [
       { status: false, name: "Live account evaluations" },
       {
@@ -72,7 +72,7 @@ export const roadmaps = [
     quater: "2023 Q2",
   },
   {
-    height: "291px",
+    height: "3rd",
     list: [
       {
         status: false,
@@ -82,7 +82,7 @@ export const roadmaps = [
     quater: "2023 Q3",
   },
   {
-    height: "196px",
+    height: "4th",
     list: [
       {
         status: false,
@@ -92,7 +92,7 @@ export const roadmaps = [
     quater: "2023 Q4",
   },
   {
-    height: "291px",
+    height: "5th",
     list: [
       {
         status: false,

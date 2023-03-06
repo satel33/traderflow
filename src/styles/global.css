@@ -31,6 +31,7 @@ body {
   overflow-x: hidden;
   background: hsl(235, 86%, 5%);
   font-family: "Inter";
+  box-sizing: border-box;
 }
 
 @layer components {
@@ -50,6 +51,13 @@ body {
   }
   .community-back {
     background-image: url(../images/community-back.png);
+    background-color: hsl(235, 86%, 5%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+  }
+  .community-back-mobile {
+    background-image: url(../images/community-back-mob.png);
     background-color: hsl(235, 86%, 5%);
     background-repeat: no-repeat;
     background-size: cover;

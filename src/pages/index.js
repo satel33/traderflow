@@ -34,17 +34,17 @@ const IndexPage = () => {
           </div>
           <img className="mx-auto mt-16 sm:hidden" src={NftImg} alt="nft" />
           <div className="mt-20 sm:mt-[327px]">
-            <h2 className="text-center font-heading text-[32px] font-bold leading-[44.8px] text-white sm:text-left sm:text-[56px] sm:leading-[67.2px]">
+            <h2 className="text-center font-heading text-[32px] font-bold leading-[44.8px] text-white sm:text-[56px] sm:leading-[67.2px] lg:text-left">
               Benefits
             </h2>
-            <ul className="mt-14 flex flex-wrap justify-around sm:mt-[132px]">
+            <ul className="mt-14 flex flex-wrap items-center justify-around sm:mt-[132px]">
               {benefitItems.map(item => (
                 <li
                   key={item.title}
-                  className="mb-16 max-w-[355px] text-center sm:mr-14 sm:text-left"
+                  className="mb-16 max-w-[355px] text-center sm:mr-14 lg:text-left"
                 >
                   <img
-                    className="mx-auto mb-8 sm:mx-0"
+                    className="mx-auto mb-8 lg:mx-0"
                     src={item.icon}
                     alt={item.title}
                   />
@@ -106,13 +106,13 @@ const IndexPage = () => {
             Sign up now
           </Button>
         </div>
-
-        <div className="none ml-[30px] border-l-4 border-white lg:ml-0 lg:border-l-0 lg:border-b-4 ">
-          <div className="container">
-            <h2 className="mb-28 text-right font-heading text-[32px] font-bold leading-[44.8px] text-white sm:text-[56px] sm:leading-[67.2px]">
+        <div className="none relative z-10 max-lg:ml-[40px] lg:ml-0">
+          <div className="absolute bottom-0 z-40 h-[85%] w-full border-l-[5px] border-[#050947] lg:h-full lg:border-l-0 lg:border-b-[5px]" />
+          <div className="pr-[30px] lg:container ">
+            <h2 className="mb-28 text-right font-heading text-[32px] font-bold leading-[44.8px] text-white max-lg:text-center sm:text-[56px] sm:leading-[67.2px]">
               Traderflow <span className="gold-linear">Roadmap</span>
             </h2>
-            <div className="flex flex-col lg:flex-row">
+            <div className="relative z-10 flex flex-col lg:flex-row lg:items-end lg:pl-8">
               {roadmaps.map((item, idx) => (
                 <RoadmapItem
                   key={idx}
