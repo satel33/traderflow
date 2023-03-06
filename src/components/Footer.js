@@ -21,10 +21,10 @@ const Footer = () => (
           ))}
         </ul>
         <div className="flex items-center">
-          <a href="/" className="mr-9">
+          <a href="https://discord.gg/gWTMSEAq" className="mr-9">
             <img src={DiscordIcon} alt="discord" />
           </a>
-          <a href="/">
+          <a href="https://twitter.com/traderflow_com">
             <img src={TwitterIcon} alt="twitter" />
           </a>
         </div>
