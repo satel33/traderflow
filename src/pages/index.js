@@ -7,7 +7,7 @@ import Header from "../components/Header"
 import { Button } from "../components/Button"
 import { RoadmapItem } from "../components/RoadmapItem"
 
-import { NftImg } from "../utils/imgImport"
+import { NftImg, HomeHero } from "../utils/imgImport"
 import { benefitItems, roadmaps, spatials } from "../utils/staticData"
 
 const IndexPage = () => {
@@ -18,19 +18,26 @@ const IndexPage = () => {
 
         {/* Hero Section */}
         <div className="container">
-          <div className="pt-12 text-center sm:pt-[128px] sm:text-left">
-            <h1 className="gold-linear font-heading text-[32px] font-bold leading-[44.8px] sm:text-[68px] sm:leading-[81.6px]">
-              Trust But Verify
-            </h1>
-            <h1 className="max-w-[836px] font-heading text-[32px] font-bold leading-[44.8px] text-white sm:text-[68px] sm:leading-[81.6px]">
-              Web 3.0 Trader Auditing, Trading Metaverse
-            </h1>
-            <p className="mx-auto mt-[12px] max-w-[355px] text-base text-gray sm:mx-0 sm:text-xl">
-              Earn profits by laucnhing, staking and funding multi-chain ideas
-            </p>
-            <Button clsName="mt-10 btn-cta sm:mt-20">
-              Sign up free of charge
-            </Button>
+          <div className="flex items-center">
+            <div className="pt-12 text-center  sm:text-left">
+              <h1 className="gold-linear font-heading text-[32px] font-bold leading-[44.8px] sm:text-[clamp(32px,4vw,68px)] sm:leading-[clamp(32px,6vw,68px)]">
+                Trust But Verify
+              </h1>
+              <h1 className="max-w-[836px] font-heading text-[32px] font-bold leading-[44.8px] text-white sm:text-[clamp(32px,4vw,68px)] sm:leading-[clamp(32px,6vw,68px)]">
+                Web 3.0 Trader Auditing, Trading Metaverse
+              </h1>
+              <p className="mx-auto mt-[12px] max-w-[355px] text-base text-gray sm:mx-0 sm:text-xl">
+                Earn profits by laucnhing, staking and funding multi-chain ideas
+              </p>
+              <Button clsName="mt-10 btn-cta sm:mt-20">
+                Sign up free of charge
+              </Button>
+            </div>
+            <img
+              className="hidden h-[100%] w-[43%] sm:block"
+              src={HomeHero}
+              alt="Hero img"
+            />
           </div>
           <img className="mx-auto mt-16 sm:hidden" src={NftImg} alt="nft" />
           <div className="mt-20 sm:mt-[327px]">

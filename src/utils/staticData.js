@@ -131,7 +131,7 @@ export const chain_list = [
   {
     title: (
       <>
-        Get up to <sapn className="gold-linear">15x</sapn> your profit{" "}
+        Get up to <span className="gold-linear">15x</span> your profit{" "}
       </>
     ),
     content: "trading your personal account from any broker ",
