@@ -23,7 +23,7 @@ import brightBlue from "../images/bright-blue.png"
 import platform from "../images/platform.png"
 import platformMobile from "../images/platform-mobile.png"
 import miniPlatform from "../images/mini-platform-light.png"
-import greaterThan from "../images/vector-19.svg"
+import greaterThan from "../images/arrow.svg"
 import illustration from "../images/illustration.png"
 import illustrationDesktop from "../images/illustration-desktop.png"
 
