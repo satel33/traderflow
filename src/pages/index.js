@@ -9,12 +9,16 @@ import Header from "../components/Header"
 import { RoadmapItem } from "../components/RoadmapItem"
 import { HomeHero, NftImg } from "../utils/imgImport"
 import { benefitItems, roadmaps, spatials } from "../utils/staticData"
+import { Modal } from '../components/Modal'
 
 const IndexPage = () => {
+  const [open, setOpen] = React.useState(false)
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
   return (
     <>
       <section className="landing-back">
-        <Header />
+        <Header handleOpen={handleOpen} />
 
         {/* Hero Section */}
         <div className="container ">
@@ -34,9 +38,10 @@ const IndexPage = () => {
                 updating financial NFT (TBV). Get trading ideas and learn from
                 verified professional traders and Analysts
               </p>
-              <Button clsName="mt-10 btn-cta sm:mt-20">
+              <Button onClick={handleOpen} clsName="mt-10 btn-cta sm:mt-20">
                 Pre-register now and get 3 months free
               </Button>
+              <Modal open={open} handleClose={handleClose} />
             </div>
             <img
               className="hidden h-[100%] w-[43%] sm:block"
@@ -110,13 +115,9 @@ const IndexPage = () => {
                     <img
                       src={item.img}
                       alt={item.lang}
-                      className={`${idx % 4 === 0
-                        ? "clip-path-polygon-[89%_100%,_0_100%,_0_0,_100%_0,_100%_81%]"
-                        : idx % 4 === 1
-                          ? "clip-path-polygon-[100%_22%,_100%_100%,_0_100%,_0_0,_86%_0]"
-                          : idx % 4 === 2
-                            ? "clip-path-polygon-[13%_0,_100%_0,_100%_100%,_0_100%,_0_21%]"
-                            : "clip-path-polygon-[0_0,_100%_0,_100%_100%,_9%_100%,_0_77%]"
+                      className={`${idx % 2 === 0
+                        ? "clip-path-polygon-[100%_87%,_92%_100%,_0_100%,_0_0,_100%_0]"
+                        : "clip-path-polygon-[91%_0,_100%_16%,_100%_100%,_0_100%,_0_0]"
                         }`}
                     />
                   </div>
@@ -131,9 +132,9 @@ const IndexPage = () => {
             Sign up now
           </Button>
         </div>
-        <div className="none relative z-10 max-lg:ml-[40px] lg:ml-0">
+        <div className="none relative z-10 max-lg:mx-[40px] lg:ml-0">
           <div className="absolute bottom-0 z-40 h-[85%] w-full border-l-[5px] border-[#050947] lg:h-full lg:border-l-0 lg:border-b-[5px]" />
-          <div className="xxl:max-w-[1380px] xxl:mx-[auto] pr-[30px] xl:container">
+          <div className="xxl:max-w-[1349px] xxl:mx-[auto] lg:pl-[30px] xl:container">
             <h2 className="mb-28 text-right font-heading text-[32px] font-bold leading-[44.8px] text-white max-lg:text-center sm:text-[56px] sm:leading-[67.2px]">
               Traderflow <span className="gold-linear">Roadmap</span>
             </h2>

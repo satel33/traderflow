@@ -7,7 +7,7 @@ export const RoadmapItem = ({ height, list, quater }) => {
 
   return (
     <div
-      className={`relative max-lg:pb-10 flex lg:flex-col flex-col-reverse w-[25%] ${height === '5th' ? 'w-[350px]' : ''} justify-between pl-[22px] ${height === '1st' ? 'lg: h-[480px]' : ' '} ${height === '2nd' ? 'lg: h-[230px]' : ' '} lg:mb-0 lg:ml-1`}
+      className={`relative max-lg:pb-10 flex lg:flex-col lg:w-[25%] flex-col-reverse ${height === '3tt' ? 'lg:h-[291px]' : ' '} ${height === '4st' ? 'lg:h-[191px]' : ' '} ${height === '5st' ? 'lg:h-[271px]' : ' '} justify-between pl-[22px] ${height === '1st' ? 'lg:h-[480px]' : ' '} ${height === '2tt' ? 'lg:h-[230px]' : ' '} lg:mb-0 lg:ml-1 ${height === '5th' ? 'lg:w-[350px]' : ''} `}
     >
       <div className={`absolute w-full h-full border-l-5 border-[#050947] lg:border-t-0 lg:border-l-4 z-30 left-[-4px]`} />
       <img
