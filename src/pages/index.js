@@ -134,7 +134,7 @@ const IndexPage = () => {
         </div>
         <div className="none relative z-10 max-lg:mx-[40px] lg:ml-0">
           <div className="absolute bottom-0 z-40 h-[85%] w-full border-l-[5px] border-[#050947] lg:h-full lg:border-l-0 lg:border-b-[5px]" />
-          <div className="xxl:max-w-[1349px] xxl:mx-[auto] lg:pl-[30px] xl:container">
+          <div className="xxl:max-w-[1349px] xxl:mx-[auto] lg:pl-[30px] lg:pr-[30px] xl:container">
             <h2 className="mb-28 text-right font-heading text-[32px] font-bold leading-[44.8px] text-white max-lg:text-center sm:text-[56px] sm:leading-[67.2px]">
               Traderflow <span className="gold-linear">Roadmap</span>
             </h2>
