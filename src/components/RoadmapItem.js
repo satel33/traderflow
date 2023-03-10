@@ -47,7 +47,7 @@ export const RoadmapItem = ({ height, list, quater }) => {
         ))}
       </ul>
       <img src={GreaterThan} alt='vector' className={`absolute z-40 ${height === '5th' ? 'block' : 'hidden'} rotate-90 lg:rotate-0 left-[-15px] bottom-[-20px] lg:right-[-150px] lg:top-[205px] lg:left-[200px] `} />
-      <p className={`relative mb-[25px] mt-5 font-heading text-xl font-semibold border-b-[5px] ${height === '1st' ? 'max-lg:w-[clamp(260px,70%,380px)]' : ''} z-10 w-max pr-5 border-[#050947] lg:border-b-0 ml-[-22px] lg:ml-0 pl-[20px] lg:pl-0  text-white lg:mb-1`}>
+      <p className={`relative mb-[25px] mt-5 font-heading text-xl font-semibold border-b-[5px] ${height === '1st' ? 'max-lg:w-[clamp(260px,70%,380px)]' : ''} z-10 w-max pr-5 border-[#050947] lg:border-b-0 ml-[-22px] lg:ml-0 pl-[20px] lg:pl-0  text-white lg:mb-[6px]`}>
         <Circle left="right-[-10px]" bottom="bottom-[-6px]" />
         {quater}
 
