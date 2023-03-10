@@ -31,7 +31,7 @@ function Modal({ open, handleClose }) {
     setResult(true)
   }
   return (
-    <div className={`${open ? 'block' : 'hidden'}`}>
+    <div className={`relative z-20 ${open ? 'block' : 'hidden'}`}>
       <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
         <div className="fixed inset-0 bg-[rgb(0,0,0,0.8)] bg-opacity-75 transition-opacity"></div>
         <div className="fixed inset-0 z-10 overflow-y-auto">
