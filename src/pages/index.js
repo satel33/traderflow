@@ -17,7 +17,7 @@ const IndexPage = () => {
   const handleClose = () => setOpen(false)
   return (
     <>
-      <section className="landing-back">
+      <section className="landing-back relative">
         <Header handleOpen={handleOpen} />
 
         {/* Hero Section */}
