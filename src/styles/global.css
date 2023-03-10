@@ -56,12 +56,29 @@ body {
     background-size: cover;
     background-position: top right;
   }
+  .clip-card-rb {
+    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+  }
+  .clip-card-lt {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  }
+  .clip-card-rt {
+    clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+  }
+  .clip-card-lb {
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  }
   .community-back-mobile {
     background-image: url(../images/community-back-mob.png);
     background-color: hsl(235, 86%, 5%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
+  }
+  .modal-back {
+    background-image: url(../images/popup-back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   .text-box {
     background-image: url(../images/text-box.png);

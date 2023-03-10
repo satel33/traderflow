@@ -1,13 +1,13 @@
 import React from "react"
+
 import { Autoplay } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 
+import { Button } from "../components/Button"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
-import { Button } from "../components/Button"
 import { RoadmapItem } from "../components/RoadmapItem"
-
-import { NftImg, HomeHero } from "../utils/imgImport"
+import { HomeHero, NftImg } from "../utils/imgImport"
 import { benefitItems, roadmaps, spatials } from "../utils/staticData"
 
 const IndexPage = () => {
@@ -17,20 +17,25 @@ const IndexPage = () => {
         <Header />
 
         {/* Hero Section */}
-        <div className="container">
+        <div className="container ">
           <div className="flex items-center">
             <div className="pt-12 text-center  sm:text-left">
               <h1 className="gold-linear font-heading text-[32px] font-bold leading-[44.8px] sm:text-[clamp(32px,4vw,68px)] sm:leading-[clamp(32px,6vw,68px)]">
                 Trust But Verify
               </h1>
-              <h1 className="max-w-[836px] font-heading text-[32px] font-bold leading-[44.8px] text-white sm:text-[clamp(32px,4vw,68px)] sm:leading-[clamp(32px,6vw,68px)]">
-                Web 3.0 Trader Auditing, Trading Metaverse
+              <h1 className="max-w-[836px] font-heading text-[32px] font-bold leading-[40.8px] text-white sm:text-[clamp(32px,4vw,68px)] sm:leading-[clamp(32px,6vw,68px)]">
+                <ul>
+                  <li>Eternal Trader Ledger</li>
+                  <li>Ranked Trader Discord</li>
+                </ul>
               </h1>
-              <p className="mx-auto mt-[12px] max-w-[355px] text-base text-gray sm:mx-0 sm:text-xl">
-                Earn profits by laucnhing, staking and funding multi-chain ideas
+              <p className="mx-auto mt-[12px] max-w-[655px] text-base text-gray sm:mx-0 sm:text-xl">
+                Join the worlds largest web 3.0 Trading community. Join get your
+                updating financial NFT (TBV). Get trading ideas and learn from
+                verified professional traders and Analysts
               </p>
               <Button clsName="mt-10 btn-cta sm:mt-20">
-                Sign up free of charge
+                Pre-register now and get 3 months free
               </Button>
             </div>
             <img
@@ -101,7 +106,20 @@ const IndexPage = () => {
             >
               {spatials.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <img src={item.img} alt={item.lang} />
+                  <div className="relative">
+                    <img
+                      src={item.img}
+                      alt={item.lang}
+                      className={`${idx % 4 === 0
+                        ? "clip-path-polygon-[89%_100%,_0_100%,_0_0,_100%_0,_100%_81%]"
+                        : idx % 4 === 1
+                          ? "clip-path-polygon-[100%_22%,_100%_100%,_0_100%,_0_0,_86%_0]"
+                          : idx % 4 === 2
+                            ? "clip-path-polygon-[13%_0,_100%_0,_100%_100%,_0_100%,_0_21%]"
+                            : "clip-path-polygon-[0_0,_100%_0,_100%_100%,_9%_100%,_0_77%]"
+                        }`}
+                    />
+                  </div>
                   <p className="absolute bottom-3 left-4 text-left font-heading text-2xl font-semibold text-white sm:bottom-4 sm:left-6 sm:text-[32px] sm:leading-[44.8px]">
                     {item.lang}
                   </p>
@@ -115,11 +133,13 @@ const IndexPage = () => {
         </div>
         <div className="none relative z-10 max-lg:ml-[40px] lg:ml-0">
           <div className="absolute bottom-0 z-40 h-[85%] w-full border-l-[5px] border-[#050947] lg:h-full lg:border-l-0 lg:border-b-[5px]" />
-          <div className="pr-[30px] lg:container ">
+          <div className="xxl:max-w-[1380px] xxl:mx-[auto] pr-[30px] xl:container">
             <h2 className="mb-28 text-right font-heading text-[32px] font-bold leading-[44.8px] text-white max-lg:text-center sm:text-[56px] sm:leading-[67.2px]">
               Traderflow <span className="gold-linear">Roadmap</span>
             </h2>
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-end lg:pl-8">
+            <div
+              className={`relative z-10 flex flex-col lg:flex-row lg:items-end lg:pl-8 `}
+            >
               {roadmaps.map((item, idx) => (
                 <RoadmapItem
                   key={idx}

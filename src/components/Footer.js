@@ -7,7 +7,9 @@ const Footer = () => (
   <footer className="bg-black pt-[91px] pb-[78px]">
     <div className="container">
       <div className="text-gray-l flex flex-wrap items-center justify-center md:justify-between">
-        <img src={Logo} alt="logo" />
+        <Link to='/'>
+          <img src={Logo} alt="logo" />
+        </Link>
         <ul className="flex flex-wrap items-center justify-center py-16">
           {footer_links.map(item => (
             <li key={item.name}>

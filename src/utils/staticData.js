@@ -1,4 +1,5 @@
 import React from "react"
+
 import {
   Intersect,
   MetaverseRoom,
@@ -54,20 +55,21 @@ export const roadmaps = [
   {
     height: "1st",
     list: [
-      { status: true, name: "Updating Traderscore NFTs" },
-      { status: false, name: "MT4/MT5 On-Chain Trade Records" },
-      { status: false, name: "Metaverse Trading Room V1" },
+      { status: true, name: "Pre-registration" },
+      { status: true, name: "Discord Community" },
     ],
     quater: "2023 Q1",
   },
   {
     height: "2nd",
     list: [
-      { status: false, name: "Live account evaluations" },
+      { status: false, name: "Updating Traderscore NFTs" },
+
       {
         status: false,
         name: "Promotions to world First on Chain Hedgefund",
       },
+      { status: false, name: "MT4/MT5 On-Chain Trade Records" },
     ],
     quater: "2023 Q2",
   },
@@ -76,8 +78,10 @@ export const roadmaps = [
     list: [
       {
         status: false,
-        name: "Broker Auditing A-Book/B-Book Check",
+        name: "Broker Auditing: A-Book/B-Book Check",
       },
+      { status: false, name: "Live account evaluations" },
+      { status: false, name: "Metaverse Trading Room V1" },
     ],
     quater: "2023 Q3",
   },
@@ -86,7 +90,7 @@ export const roadmaps = [
     list: [
       {
         status: false,
-        name: "Expanding Broker support: Interactive Brokers",
+        name: "Expanding Broker support: Interactive Brokers, cTrader, Tradingview",
       },
     ],
     quater: "2023 Q4",
@@ -297,6 +301,12 @@ export const table_body = [
     profit: "60%",
     payout: "€ 600",
   },
+]
+
+export const header_links = [
+  { name: "Community Fund", to: "/community-fund" },
+  { name: "Competitions", to: "/competitions" },
+  { name: "About Us", to: "/about-us" },
 ]
 
 export const footer_links = [

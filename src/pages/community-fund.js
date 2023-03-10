@@ -6,6 +6,7 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import { Button } from "../components/Button"
 import { Circle } from "../components/Circle"
+import { Modal } from '../components/Modal'
 import { NextIcon, PrevIcon, IllustratoinDesktop } from "../utils/imgImport"
 import {
   chain_list,
@@ -17,10 +18,13 @@ import {
 const CommunityFundPage = () => {
   const prevRef = useRef(null)
   const nextRef = useRef(null)
+  const [open, setOpen] = React.useState(false)
+  const handleOpen = () => setOpen(true)
+  const handleClose = () => setOpen(false)
   return (
     <>
       <section className="xxs:community-back overflow-hidden max-xxs:bg-[url(../images/community-back-mob.png)]">
-        <Header />
+        <Header handleOpen={handleOpen} />
         <div className="container my-[120px] text-center">
           <h1 className="font-heading text-[28px] font-bold leading-[44.8px] text-white xs:text-[32px] sm:text-[60px] sm:leading-[96px]">
             World <span className="gold-linear">First</span>
@@ -31,7 +35,8 @@ const CommunityFundPage = () => {
             All traders need to apply with evaluation on Chain, All the
             hedgefunds Trades are recording Onchain
           </p>
-          <Button clsName="mt-10 btn-cta">Join now for free</Button>
+          <Button clsName="mt-10 btn-cta" onClick={handleOpen}>Join now for free</Button>
+          <Modal open={open} handleClose={handleClose} />
         </div>
 
         <div className="container py-28">
@@ -235,7 +240,7 @@ const CommunityFundPage = () => {
           </div>
         </div>
 
-        <div className="container relative z-10 mt-24 max-xxs:mt-[clamp(100px,65vw,230px)] max-xxxs:mt-[clamp(100px,25vw,150px)] sm:pb-[120px] lg:mt-[200px]">
+        <div id="about" className="container relative z-10 mt-24 max-xxs:mt-[clamp(100px,65vw,230px)] max-xxxs:mt-[clamp(100px,25vw,150px)] sm:pb-[120px] lg:mt-[200px]">
           <h2 className="relative z-10 mt-12 text-center font-heading text-[36px] font-bold leading-[67.2px] text-white sm:mb-20 lg:text-[56px] ">
             About <span className="gold-linear">Traderflow</span>
           </h2>

@@ -39,9 +39,10 @@ module.exports = {
         'xxxs': '337px',
         'xxs': '362px',
         'xs': '426px',
-        'sm': "750px",
+        'sm': "769px",
         'md': "970px",
         'lg': "1025px",
+        'xxl': '1259px',
         'xl': "1440px",
       },
       boxShadow: {
@@ -53,5 +54,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-clip-path')
+  ],
 }
