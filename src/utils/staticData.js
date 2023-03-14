@@ -41,14 +41,14 @@ export const spatials = [
     img: Spatial3,
     lang: "Thai",
   },
-  {
-    img: Spatial1,
-    lang: "English",
-  },
-  {
-    img: Spatial2,
-    lang: "Chinese",
-  },
+  // {
+  //   img: Spatial1,
+  //   lang: "English",
+  // },
+  // {
+  //   img: Spatial2,
+  //   lang: "Chinese",
+  // },
 ]
 
 export const roadmaps = [
