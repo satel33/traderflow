@@ -111,14 +111,14 @@ const IndexPage = () => {
             >
               {spatials.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="relative">
+                  <div className={`relative cursor-pointer  ${idx % 3 === 0
+                    ? "clip-path-polygon-[100%_87%,_92%_100%,_0_100%,_0_0,_100%_0]" : idx % 3 === 1 ? "clip-path-polygon-[91%_0,_100%_16%,_100%_100%,_0_100%,_0_0]"
+                      : "clip-path-polygon-[9%_0,_100%_0,_100%_100%,_0_100%,_0_16%]"
+                    } hover:shadow-button`}>
                     <img
                       src={item.img}
                       alt={item.lang}
-                      className={`${idx % 2 === 0
-                        ? "clip-path-polygon-[100%_87%,_92%_100%,_0_100%,_0_0,_100%_0]"
-                        : "clip-path-polygon-[91%_0,_100%_16%,_100%_100%,_0_100%,_0_0]"
-                        }`}
+                      className="shadow-button"
                     />
                   </div>
                   <p className="absolute bottom-3 left-4 text-left font-heading text-2xl font-semibold text-white sm:bottom-4 sm:left-6 sm:text-[32px] sm:leading-[44.8px]">
