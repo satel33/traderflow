@@ -317,7 +317,7 @@ export const trading__data = [{
   period: 'YEARLY',
   competition: 'Professional Chanpionships',
   cost: 'FREE ENTRY',
-  benefits: ['Live account', 'Any MT4/MT5 broker balances above $10K', 'First prize $1M', 'Trading account', 'Last place $5K/month to let us study you']
+  benefits: ['Live account', 'Any MT4/MT5 broker balances above $10K', 'Trading account', 'First prize $1M', 'Last place $5K/month to let us study you']
 }]
 export const header_links = [
   { name: "Community Fund", to: "/community-fund" },
