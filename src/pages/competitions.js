@@ -12,65 +12,37 @@ const CommunityFundPage = () => {
   const handleClose = () => setOpen(false)
   return (
     <>
-      <section className="bg-competition-pos overflow-hidden bg-[url(../images/competitions-back-desktop.png)] bg-no-repeat">
+      <section className="bg-[url(../images/competitions-back-desktop.png)] overflow-hidden bg-competition-pos bg-no-repeat bg-cover">
         <Header handleOpen={handleOpen} />
         <Modal open={open} handleClose={handleClose} />
-        <h1 className="mb-[30px] mt-[30px] text-center font-heading text-[36px] font-bold text-white sm:text-[56px]">
-          Trading{" "}
-          <span className="bg-gradient-to-r from-[#F5C96D] to-[#F5B160] bg-clip-text fill-transparent text-[#F5C96D] duration-300 ease-in-out">
-            Competitions
-          </span>
-        </h1>
-        <div className="mx-auto flex max-w-[1440px] justify-between px-[10px] max-lg:flex-col xl:px-[72px] ">
-          {trading__data.map((item, idx) => {
-            return (
-              <div
-                key={idx}
-                className={`group mt-7 flex w-[300px] cursor-pointer flex-col bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#062262] to-[#000000] p-4  hover:from-[#f5b86466] hover:to-[#ffe9b000] sm:h-auto sm:w-[348px] lg:h-[640px] lg:w-[330px] lg:p-5 xxl:w-[380px] xl:w-[418px] xl:p-8 ${
-                  idx === 0
-                    ? "clip-path-polygon-[9%_0,_100%_0,_100%_100%,_0_100%,_0_6%]"
-                    : idx === 2
-                    ? "clip-path-polygon-[100%_0,_100%_95%,_92%_100%,_0_100%,_0_0]"
+        <h1 className="font-heading font-bold text-[36px] sm:text-[56px] text-white text-center mb-[30px] mt-[30px]">Trading <span className="text-[#F5C96D] bg-gradient-to-r from-[#F5C96D] to-[#F5B160] fill-transparent bg-clip-text duration-300 ease-in-out">Competitions</span></h1>
+        <div className="max-w-[1440px] xl:px-[72px] px-[10px] flex justify-between mx-auto max-lg:flex-col lg:mb-[251px] mb-[159px]">
+          {
+            trading__data.map((item, idx) => {
+              return (
+                <div key={idx} className={`group w-[336px] h-[514px] lg:w-[348px] lg:h-[640px] p-6  xxl:w-[380px] lg:p-5 xl:w-[418px]  xl:p-8 mt-7 flex flex-col bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] hover:from-[#f5b86466] hover:to-[#ffe9b000] from-[#062262] to-[#000000] cursor-pointer ${idx === 0
+                  ? "clip-path-polygon-[9%_0,_100%_0,_100%_100%,_0_100%,_0_6%]" : idx === 2 ? "clip-path-polygon-[100%_0,_100%_95%,_92%_100%,_0_100%,_0_0]"
                     : ""
-                } duration-300  ease-in-out max-xl:mx-auto`}
-              >
-                <h4 className="mb-[56px] text-center text-[16px] font-normal text-white sm:text-[20px] ">
-                  {item.period}
-                </h4>
-                <h5 className="mb-2 bg-gradient-to-r from-[#F5C96D] to-[#F5B160] bg-clip-text fill-transparent text-center font-semibold text-[#F5C96D]">
-                  {item.competition}
-                </h5>
-                <p className="mb-[34px] text-center font-body text-[26px] font-bold text-white sm:mb-[64px] sm:text-[32px]">
-                  {item.cost}
-                </p>
-                <ul>
-                  {item.benefits.map((item, idx) => {
-                    return (
-                      <li key={item + idx} className="mb-2 flex items-start">
-                        <img
-                          src={CheckIconYellow}
-                          alt="Yellow check"
-                          className="h-[18px] w-[18px] sm:h-[24px] sm:w-[24px]"
-                        />
-                        <p className="mt-[-3px] pl-2 text-[13px] font-normal text-white sm:mt-[-7px] sm:text-[20px]">
-                          {item}
-                        </p>
-                      </li>
-                    )
-                  })}
-                </ul>
-                <div className="mt-[34px] mb-3 lg:mb-0 lg:mt-auto">
-                  <Button
-                    type="secondary"
-                    clsName="relative w-full group-hover:bg-white group-hover:text-black py-[10px]"
-                    onClick={handleOpen}
-                  >
-                    Join now
-                  </Button>
+                  } max-xl:mx-auto  duration-300 ease-in-out`}>
+                  <h4 className="text-center font-normal text-[16px] mb-[32px] lg:mb-[56px] text-white ">{item.period}</h4>
+                  <h5 className="text-center font-semibold text-[20px]  text-[#F5C96D] bg-gradient-to-r from-[#F5C96D] to-[#F5B160] fill-transparent bg-clip-text mb-2">{item.competition}</h5>
+                  <p className="text-center font-body font-bold text-[32px] mb-[34px] lg:mb-[64px] text-white">{item.cost}</p>
+                  <ul>
+                    {item.benefits.map((item, idx) => {
+                      return (
+                        <li key={item + idx} className="flex items-start mb-2">
+                          <img src={CheckIconYellow} alt='Yellow check' className="w-[18px] h-[18px] lg:w-[24px] lg:h-[24px]" />
+                          <p className="pl-2 font-normal text-[16px] lg:text-[20px] text-white mt-[-3px] lg:mt-[-7px]">{item}</p>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                  <div className="mb-0 mt-auto">
+                    <Button type="secondary" clsName="relative w-full group-hover:bg-white group-hover:text-black py-[10px]" onClick={handleOpen}>Join now</Button>
+                  </div>
                 </div>
-              </div>
-            )
-          })}
+              )
+            })}
         </div>
       </section>
       <Footer />
