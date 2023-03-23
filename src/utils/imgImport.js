@@ -27,6 +27,7 @@ import wires from "../images/wires.png"
 import walletTag from '../images/connect-icon.png'
 import cross from '../images/cross.png'
 import warningIcon from '../images/warning-icon.png'
+import checkYellow from '../images/check-yellow.svg'
 
 export const Logo = logo
 export const LogoMob = logoMob
@@ -61,3 +62,4 @@ export const WalletTag = walletTag
 export const Cross = cross
 export const DiscordBlue = discordBlue
 export const WarningIcon = warningIcon
+export const CheckIconYellow = checkYellow
