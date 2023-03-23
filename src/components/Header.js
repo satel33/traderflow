@@ -77,7 +77,6 @@ const Header = ({ handleOpen }) => {
             >
               {user || "Webauth login"}
             </Button>
-            <Button onClick={handleOpen} type="primary">Join now</Button>
           </div>
         </div>
       </header>
