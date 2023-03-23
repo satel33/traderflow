@@ -75,6 +75,10 @@ body {
     background-size: cover;
     background-position: top right;
   }
+  .bg-competition-pos {
+    background-position-x: center;
+    background-position-y: -9px;
+  }
   .modal-back {
     background-image: url(../images/popup-back.png);
     background-repeat: no-repeat;

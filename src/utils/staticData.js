@@ -302,7 +302,23 @@ export const table_body = [
     payout: "€ 600",
   },
 ]
+export const trading__data = [{
+  period: 'MONTHLY',
+  competition: '$10K Monthly',
+  cost: '$99 USD',
+  benefits: ['Different themes each month', 'AUD Champion May 1st', 'Entry till NFP MAY 5th', '$10K guaranteed monthly prize']
+}, {
+  period: 'YEARLY',
+  competition: 'Amateur Chanpionships',
+  cost: 'FREE ENTRY',
+  benefits: ['Live account', 'Any MT4/MT5 broker balances under $10K', 'First prize $10K', 'Last place $5K']
 
+}, {
+  period: 'YEARLY',
+  competition: 'Professional Chanpionships',
+  cost: 'FREE ENTRY',
+  benefits: ['Live account', 'Any MT4/MT5 broker balances above $10K', 'First prize $1M', 'Trading account', 'Last place $5K/month to let us study you']
+}]
 export const header_links = [
   { name: "Community Fund", to: "/community-fund" },
   { name: "Competitions", to: "/competitions" },
