@@ -1,7 +1,9 @@
 import React from "react"
+
 import { Link } from "gatsby"
+
+import { Logo } from "../utils/imgImport"
 import { footer_links } from "../utils/staticData"
-import { DiscordIcon, Logo, TwitterIcon } from "../utils/imgImport"
 
 const Footer = () => (
   <footer className="bg-black pt-[91px] pb-[78px]">
@@ -22,14 +24,6 @@ const Footer = () => (
             </li>
           ))}
         </ul>
-        <div className="flex items-center">
-          <a href="https://discord.gg/gWTMSEAq" className="mr-9">
-            <img src={DiscordIcon} alt="discord" />
-          </a>
-          <a href="https://twitter.com/traderflow_com">
-            <img src={TwitterIcon} alt="twitter" />
-          </a>
-        </div>
       </div>
       <p className="pt-24 text-center text-base text-gray-light">
         All rights reserved. © Traderflow 2023
