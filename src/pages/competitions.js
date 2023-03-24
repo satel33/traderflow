@@ -3,11 +3,9 @@ import React from "react"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import { Button } from "../components/Button"
-import { Modal } from '../components/Modal'
+import { Modal } from "../components/Modal"
 import { CheckIconYellow } from "../utils/imgImport"
-import {
-  trading__data
-} from "../utils/staticData"
+import { trading__data } from "../utils/staticData"
 const CommunityFundPage = () => {
   const [open, setOpen] = React.useState(false)
   const handleOpen = () => setOpen(true)
@@ -44,8 +42,7 @@ const CommunityFundPage = () => {
                   </div>
                 </div>
               )
-            })
-          }
+            })}
         </div>
       </section>
       <Footer />
